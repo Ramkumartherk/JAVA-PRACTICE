@@ -1,0 +1,231 @@
+ODD POSITION SUM
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> myList = new ArrayList<>();
+        ArrayList<Integer>odd=new ArrayList<>();
+        
+        
+        myList.add(5);
+        myList.add(3);
+        myList.add(8);
+        myList.add(2);
+        myList.add(6);
+        myList.add(1);
+        myList.add(9);
+        myList.add(4);
+        myList.add(7);
+        myList.add(10);
+  
+    
+        for(int i=0;i<myList.size();i++){
+            if(i%2!=0){
+                int j=i;
+                odd.add(i);
+            }
+         
+        int sum=0;
+        System.out.println(odd);
+        for(int i=0;i<odd.size();i++){
+            sum=sum+myList.get(odd.get(i));
+        }
+        System.out.println(sum);
+    }
+}
+
+OOPS
+
+import java.util.*;
+class calculator{
+    ArrayList<Integer>all=new ArrayList<>();
+    public  ArrayList<Integer> calc(ArrayList<Integer>num){
+
+        for(int i=0;i<num.size();i++){
+            int storer= num.get(i)+1;
+            all.add(storer);
+        }
+        return all;
+
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args) {
+        ArrayList<Integer>al=new ArrayList<>();
+        calculator c=new calculator();
+        al.add(1);+
+        al.add(2);
+        ArrayList<Integer>re=c.calc(al);
+        System.out.println(re);
+    }
+}
+
+
+MATRIX MULTIPLY
+
+public class Main{  
+public static void main(String args[]){  
+  
+int a[][]={{1,1},{2,2}};    
+int b[][]={{1,1},{2,2}};    
+    
+    
+int c[][]=new int[2][2];  
+    
+    
+for(int i=0;i<2;i++){    
+for(int j=0;j<2;j++){    
+c[i][j]=0;      
+for(int k=0;k<2;k++)      
+{      
+c[i][j]=c[i][j]+a[i][k]*b[k][j];      
+}  
+System.out.print(c[i][j]+" ");   
+}  
+System.out.println();  
+}    
+}}  
+
+
+MATRIX MOVING
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    ArrayList<Integer>al=new ArrayList<>();
+	    Scanner sc= new Scanner(System.in);
+	    String input[]=new String[4];
+	    int rows=4;
+	    int colums=4;
+	    int count=0;
+	  int row=0;
+	  int col=0;
+	    
+	    for(int i=0;i<4;i++){
+	        input[i]=sc.nextLine();
+	        
+	    }
+	    int arr[][]=new int[rows][colums];
+	    for(int i=0;i<rows;i++){  //rows
+	        for(int j=0;j<colums;j++){   //colums
+	            arr[i][j]=count++;
+	           System.out.print(arr[i][j]+" ");
+	            
+	        }
+	        System.out.println(" ");
+        }
+        for(int i=0;i<4;i++){
+        
+        
+	  if(input[i].equals("right")){
+	   
+	      int a=arr[row][col+1];
+	      al.add(a);
+	      
+	      col=col+1;
+	      
+	  }
+	 else if(input[i].equals("left")&&i>0){
+	     
+	     int a =arr[row][col-1];
+	     al.add(a);
+	    
+	     col=col-1;
+	      
+	  }
+	  else if(input[i].equals("down")&&i<rows){
+	      
+	      int a=arr[row+1][col];
+	      al.add(a);
+	      row=row+1;
+	  }
+	   else if(input[i].equals("up")&&i<=rows){
+	      
+	      int a=arr[row-1][col];
+	      al.add(a);
+	      row=row-1;
+	  }
+        }
+        System.out.println(al);
+	}
+	
+	
+}
+
+
+SUM OF ELEMENTS IN JAVA
+
+public class SumOfElements {
+    public static void main(String[] args) {
+        // Declare an array of numbers
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        // Initialize a variable to store the sum
+        int sum = 0;
+
+        // Iterate through the array and add each element to the sum
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+
+        // Print the sum
+        System.out.println("The sum of elements in the array is: " + sum);
+    }
+}
+
+INHERITANCE
+
+class Vehicle {
+  protected String brand = "Ford";        // Vehicle attribute
+  public void honk() {                    // Vehicle method
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";    // Car attribute
+  public static void main(String[] args) {
+
+   
+    Car myCar = new Car();
+
+  
+    myCar.honk();
+
+   
+    System.out.println(myCar.brand + " " + myCar.modelName);
+  }
+}
+
+INTERFACE
+
+
+
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+class Pig implements Animal {
+  public void animalSound() {
+   
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+  
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
